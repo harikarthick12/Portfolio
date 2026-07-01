@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-color: #F8FAFC;
+    --text-primary: #1E293B;
+    --text-secondary: #64748B;
+    --surface-color: 255, 255, 255;
+    --border-color: rgba(226, 232, 240, 0.6);
+    --glass-bg: rgba(255, 255, 255, 0.4);
+    --glass-card-bg: rgba(255, 255, 255, 0.6);
+  }
+
+  .dark {
+    --bg-color: #020617;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --surface-color: 15, 23, 42;
+    --border-color: rgba(51, 65, 85, 0.6);
+    --glass-bg: rgba(15, 23, 42, 0.4);
+    --glass-card-bg: rgba(15, 23, 42, 0.6);
+  }
+
+  * {
+    border-color: var(--border-color);
+  }
+
+  html {
+    scroll-behavior: initial;
+  }
+
+  body {
+    @apply bg-background text-primary font-sans antialiased transition-colors duration-700;
+    background-image: 
+      radial-gradient(circle at 0% 0%, rgba(99, 102, 241, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 100% 100%, rgba(168, 85, 247, 0.05) 0%, transparent 50%);
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background-color: var(--glass-bg);
+    @apply backdrop-blur-2xl border border-white/10 dark:border-white/5 shadow-glass dark:shadow-glass-dark rounded-[2rem];
+  }
+
+  .glass-card {
+    background-color: var(--glass-card-bg);
+    @apply backdrop-blur-xl border border-white/20 dark:border-white/10 shadow-premium dark:shadow-premium-dark rounded-2xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-500;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent-indigo via-accent-purple to-accent-pink bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply px-8 py-4 bg-primary text-white rounded-full font-bold flex items-center gap-2 hover:bg-slate-800 transition-all shadow-lg hover:shadow-black/20 dark:hover:shadow-white/10;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-4 bg-white/80 backdrop-blur-md border border-white/50 rounded-full font-bold hover:bg-white transition-all shadow-sm;
+  }
+
+  .nav-link {
+    @apply text-sm font-semibold text-secondary hover:text-primary transition-all relative py-2;
+  }
+}
+
+/* Custom cursors for light theme */
+.cursor-dot {
+  @apply fixed w-2 h-2 bg-primary rounded-full pointer-events-none z-[9999];
+}
+
+.cursor-ring {
+  @apply fixed w-10 h-10 border border-black/20 dark:border-white/20 rounded-full pointer-events-none z-[9998] transition-all duration-300;
+}
