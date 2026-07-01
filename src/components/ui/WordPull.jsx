@@ -42,7 +42,7 @@ export function WordPull({
         <motion.span
           key={i}
           variants={item}
-          className={cn("pr-2", className)}
+          className={cn(i !== words.length - 1 && "pr-[0.2em]", className)}
         >
           {word === "" ? "\u00A0" : word}
         </motion.span>

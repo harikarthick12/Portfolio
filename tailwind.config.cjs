@@ -21,6 +21,7 @@ module.exports = {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         display: ['Outfit', 'sans-serif'],
+        cursive: ['Caveat', 'cursive'],
       },
       boxShadow: {
         'premium': '0 10px 40px -10px rgba(0, 0, 0, 0.05)',

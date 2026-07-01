@@ -42,5 +42,49 @@ export const projects = [
     github: "#", // TODO
     image: "", // TODO: add real screenshot
     featured: false
+  },
+  {
+    id: 5,
+    title: "Payanam Parcel",
+    description: "A crowd-sourced, peer-to-peer parcel delivery platform that connects Senders with Travelers already heading to the same destination — turning every journey into a delivery opportunity.",
+    role: "Full-Stack Developer",
+    tech: ["Flutter", "Node.js", "Socket.io", "React"],
+    link: "#",
+    github: "https://github.com/harikarthick12/Payanam-Parcel.git",
+    image: "",
+    featured: false
+  },
+  {
+    id: 6,
+    title: "AptiQ",
+    description: "A production-ready web application that acts as a personal human tutor. It uses Generative AI to teach aptitude and technical concepts through an adaptive learning loop.",
+    role: "Full-Stack Developer",
+    tech: ["Generative AI", "Web"],
+    link: "#",
+    github: "https://github.com/harikarthick12/AptiQ.git",
+    image: "",
+    featured: false
+  },
+  {
+    id: 7,
+    title: "Cafe Corner",
+    description: "A responsive restaurant website built for a local café in Ariyalur, featuring a full menu showcase, brand story, customer testimonials, and direct food ordering integration via Swiggy and Zomato.",
+    role: "Frontend Developer",
+    tech: ["Next.js", "Netlify"],
+    link: "#",
+    github: "https://github.com/harikarthick12/Cafe-Corner.git",
+    image: "",
+    featured: false
+  },
+  {
+    id: 8,
+    title: "Atti",
+    description: "Student-powered creative & tech community — we build your digital presence, affordably.",
+    role: "Co-Founder & Tech Lead",
+    tech: ["Web", "Community"],
+    link: "#",
+    github: "https://github.com/harikarthick12/Atti.git",
+    image: "",
+    featured: false
   }
 ];

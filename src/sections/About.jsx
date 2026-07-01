@@ -46,26 +46,60 @@ export default function About() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="absolute -inset-10 bg-gradient-to-tr from-accent-indigo/10 to-accent-pink/10 blur-3xl rounded-full" />
-            <div className="relative glass-panel aspect-square flex items-center justify-center overflow-hidden group">
-               {/* Abstract Glass Sculpture Illustration using CSS/SVG */}
-               <div className="relative w-full h-full flex items-center justify-center p-20">
-                  <motion.div 
-                    style={{ rotate: rotate1 }}
-                    className="absolute w-64 h-64 border border-slate-200/50 dark:border-slate-700/50 rounded-[3rem] bg-white/20 dark:bg-slate-800/20"
-                  />
-                  <motion.div 
-                    animate={{ rotate: -360 }}
-                    transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-                    className="absolute w-56 h-56 border border-slate-200/50 dark:border-slate-700/50 rounded-[3rem] -rotate-12 bg-white/20 dark:bg-slate-800/20"
-                  />
-                  <motion.div 
-                    style={{ scale: scale1 }}
-                    className="relative w-48 h-48 bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900 rounded-[3rem] shadow-2xl dark:shadow-premium-dark flex items-center justify-center transition-transform group-hover:scale-110 duration-500"
-                  >
-                    <div className="w-16 h-1 bg-gradient-to-r from-accent-indigo to-accent-purple rounded-full" />
+            <div className="relative w-full aspect-square md:aspect-auto md:h-[400px] flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-tr from-accent-indigo/20 to-accent-pink/20 blur-3xl rounded-full opacity-50" />
+              
+              {/* Code Editor Window */}
+              <motion.div 
+                className="relative w-full max-w-md bg-[#0d1117] border border-slate-800 rounded-2xl overflow-hidden shadow-2xl z-10 font-mono text-sm sm:text-base flex flex-col"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                {/* Editor Header */}
+                <div className="bg-[#161b22] px-4 py-3 flex items-center gap-2 border-b border-slate-800">
+                  <div className="w-3 h-3 rounded-full bg-red-500/80" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
+                  <div className="w-3 h-3 rounded-full bg-green-500/80" />
+                  <span className="ml-4 text-xs text-slate-400 font-sans">hari@dev-machine:~</span>
+                </div>
+                
+                {/* Terminal Content */}
+                <div className="p-6 text-slate-300 leading-relaxed overflow-x-auto text-xs sm:text-sm font-mono">
+                  <motion.div initial="hidden" whileInView="visible" viewport={{ once: false }} transition={{ staggerChildren: 0.3 }}>
+                    <motion.div variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }} className="mb-2">
+                      <span className="text-green-400">➜</span> <span className="text-blue-400">~</span> <span className="text-white">npm run build-career</span>
+                    </motion.div>
+                    
+                    <motion.div variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }} className="mb-4 text-slate-400">
+                      &gt; hari-portfolio@1.0.0 build-career<br/>
+                      &gt; Compiling skills &amp; experience...
+                    </motion.div>
+
+                    <motion.div variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }} className="mb-1">
+                      <span className="text-green-500">✔</span> Loaded <span className="text-accent-indigo">Full-Stack</span> Modules (React, Node, Flutter)
+                    </motion.div>
+                    <motion.div variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }} className="mb-1">
+                      <span className="text-green-500">✔</span> Calibrated <span className="text-accent-purple">AI &amp; Data Science</span> Models (Python, SQL)
+                    </motion.div>
+                    <motion.div variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }} className="mb-1">
+                      <span className="text-green-500">✔</span> Initialized <span className="text-blue-400">SlotCut</span> Native Android App
+                    </motion.div>
+                    <motion.div variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }} className="mb-4">
+                      <span className="text-green-500">✔</span> Bootstrapped <span className="text-yellow-500">Atti</span> Tech &amp; Creative Studio
+                    </motion.div>
+
+                    <motion.div variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }} className="text-slate-100 font-bold">
+                      Build successful in 3.14s
+                    </motion.div>
+                    <motion.div variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }} className="mt-2 flex items-center">
+                      <span className="text-green-400">➜</span> <span className="text-blue-400 ml-2">status:</span> <span className="text-white ml-2">READY_FOR_PLACEMENTS</span>
+                      <motion.span animate={{ opacity: [1, 0] }} transition={{ repeat: Infinity, duration: 0.8 }} className="inline-block w-2 h-4 bg-slate-400 ml-2" />
+                    </motion.div>
                   </motion.div>
-               </div>
+                </div>
+              </motion.div>
             </div>
             
             {/* Floating Tooltips */}

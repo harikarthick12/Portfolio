@@ -44,7 +44,20 @@ export default function FeaturedProject() {
                     className="w-full h-full object-cover"
                   />
                 ) : (
-                   <span className="text-slate-400 text-sm font-bold uppercase tracking-widest">Screenshot Pending</span>
+                  <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 overflow-hidden relative">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.03)_1px,transparent_1px)] dark:bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[length:24px_24px]" />
+                    <motion.div 
+                      initial={{ clipPath: 'inset(0 100% 0 0)' }}
+                      whileInView={{ clipPath: 'inset(0 0% 0 0)' }}
+                      transition={{ duration: 2, ease: "easeInOut" }}
+                      viewport={{ once: false }}
+                      className="z-10 flex items-center justify-center w-full h-full"
+                    >
+                      <span className="font-cursive text-5xl md:text-7xl font-bold text-slate-400 dark:text-slate-500 -rotate-6 transform scale-110 transition-all duration-700 text-center px-4 leading-tight drop-shadow-sm">
+                        {project.title}
+                      </span>
+                    </motion.div>
+                  </div>
                 )}
               </div>
             </div>

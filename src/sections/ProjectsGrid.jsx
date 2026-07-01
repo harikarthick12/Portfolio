@@ -1,12 +1,18 @@
-import { motion } from 'framer-motion';
-import { ExternalLink, Github, Code2, ArrowRight } from 'lucide-react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ExternalLink, Github, Code2, ArrowRight, ArrowDown, ArrowUp } from 'lucide-react';
 import { projects } from '../data/projects';
 import { BentoGrid, BentoGridItem } from '../components/ui/BentoGrid';
 import { MagneticButton } from '../components/ui/MagneticButton';
 
 export default function ProjectsGrid() {
-  // Only take exactly 3 secondary projects for the grid
-  const secondaryProjects = projects.filter(p => !p.featured).slice(0, 3);
+  const [showAll, setShowAll] = useState(false);
+  
+  // If showAll is true, show ALL projects (including featured ones from home screen).
+  // Otherwise, only show up to 3 non-featured projects.
+  const visibleProjects = showAll 
+    ? projects 
+    : projects.filter(p => !p.featured).slice(0, 3);
 
   return (
     <section className="py-32 relative bg-slate-50/50 dark:bg-slate-900/50 transition-colors duration-700">
@@ -24,8 +30,17 @@ export default function ProjectsGrid() {
         </div>
 
         <BentoGrid className="max-w-7xl mb-16">
-          {secondaryProjects.map((project) => (
-            <BentoGridItem
+          <AnimatePresence mode="popLayout">
+            {visibleProjects.map((project) => (
+              <motion.div
+                key={project.id}
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.4 }}
+              >
+                <BentoGridItem
               key={project.id}
               title={project.title}
               description={project.description}
@@ -38,11 +53,23 @@ export default function ProjectsGrid() {
                       className="w-full h-full object-cover transition-transform duration-700 group-hover/bento:scale-110"
                     />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center text-slate-400">
-                      <Code2 size={48} opacity={0.5} />
+                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 overflow-hidden relative">
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.03)_1px,transparent_1px)] dark:bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[length:16px_16px]" />
+                      
+                      <motion.div 
+                        initial={{ clipPath: 'inset(0 100% 0 0)' }}
+                        whileInView={{ clipPath: 'inset(0 0% 0 0)' }}
+                        transition={{ duration: 2, ease: "easeInOut" }}
+                        viewport={{ once: false }}
+                        className="z-10 flex items-center justify-center w-full h-full"
+                      >
+                        <span className="font-cursive text-4xl md:text-5xl font-bold text-slate-400 dark:text-slate-500 -rotate-6 transform scale-110 group-hover/bento:scale-125 group-hover/bento:-rotate-3 group-hover/bento:text-accent-indigo transition-all duration-700 text-center px-4 leading-tight drop-shadow-sm">
+                          {project.title}
+                        </span>
+                      </motion.div>
                     </div>
                   )}
-                  <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-[2px] flex items-center justify-center gap-4 opacity-0 group-hover/bento:opacity-100 transition-all duration-500">
+                  <div className="absolute inset-0 z-20 bg-slate-900/40 backdrop-blur-[2px] flex items-center justify-center gap-4 opacity-0 group-hover/bento:opacity-100 transition-all duration-500">
                     {project.link !== "#" && (
                       <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white text-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-xl">
                         <ExternalLink size={18} />
@@ -56,20 +83,20 @@ export default function ProjectsGrid() {
               }
               icon={<Code2 className="h-5 w-5 text-accent-indigo" />}
             />
-          ))}
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </BentoGrid>
 
         <div className="flex justify-center">
           <MagneticButton>
-            <a 
-              href="https://github.com/harikarthick12" 
-              target="_blank" 
-              rel="noopener noreferrer"
+            <button 
+              onClick={() => setShowAll(!showAll)}
               className="px-8 py-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-primary dark:text-white rounded-full font-bold flex items-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all shadow-sm"
             >
-              View All Projects on GitHub
-              <ArrowRight size={18} />
-            </a>
+              {showAll ? 'Show Less Projects' : 'View All Projects'}
+              {showAll ? <ArrowUp size={18} /> : <ArrowDown size={18} />}
+            </button>
           </MagneticButton>
         </div>
       </div>

@@ -43,9 +43,9 @@ export default function Hero() {
             </span>
           </motion.div>
           
-          <div className="text-6xl md:text-[7.5rem] font-display font-extrabold leading-[0.9] tracking-tighter mb-10 flex flex-col items-center">
-            <WordPull text="Hari Karthick" />
-            <WordPull text="Full-Stack Developer" className="text-gradient" delay={0.1} />
+          <div className="text-5xl md:text-7xl lg:text-[6rem] font-display font-extrabold leading-[0.9] tracking-tighter mb-10 flex flex-col items-center">
+            <WordPull text="Hari Karthick" wrapperClassName="justify-center flex-nowrap" />
+            <WordPull text="Full-Stack Developer" className="text-gradient whitespace-nowrap" wrapperClassName="justify-center flex-nowrap" delay={0.1} />
           </div>
           
           <motion.p
