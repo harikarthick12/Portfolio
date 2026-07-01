@@ -1,42 +1,46 @@
 export const projects = [
   {
     id: 1,
-    title: "Lumina Commerce",
-    description: "A next-generation e-commerce platform with a focus on tactile interactions and visual storytelling. Built with high-polished glass aesthetics and fluid transitions.",
-    tech: ["React", "Framer Motion", "Tailwind", "Node.js"],
-    link: "#",
-    github: "#",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop", // Abstract 3D
+    title: "SlotCut",
+    description: "A hyperlocal salon booking and live-queue management platform built for Tier 2/3 cities, where walk-in wait times are the real pain point. Users see live queue status and book a slot in real time instead of waiting in-store.",
+    role: "Solo builder — architected and built the native Android app end-to-end.",
+    tech: ["Kotlin", "Jetpack Compose", "MVVM", "Hilt", "Retrofit", "Socket.IO"],
+    link: "#", // TODO: live APK / Play Store link
+    github: "#", // TODO
+    image: "", // TODO: add real screenshot
     featured: true
   },
   {
     id: 2,
-    title: "Aura Health",
-    description: "Real-time health monitoring dashboard featuring ultra-precise data visualization and a calming, minimalist interface.",
-    tech: ["Next.js", "TypeScript", "D3.js", "Firebase"],
-    link: "#",
-    github: "#",
-    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=1200&auto=format&fit=crop", // Abstract mesh
+    title: "Audadham",
+    description: "A healthcare companion app for medicine management — OCR-based prescription scanning, drug interaction checking, and vitals tracking, built for people managing multiple prescriptions.",
+    role: "Built with a 3-person team; owned app architecture and core feature implementation alongside UI direction.",
+    tech: ["Flutter", "Dart", "OCR", "Firebase"],
+    link: "#", // TODO
+    github: "#", // TODO
+    image: "", // TODO: add real screenshot
     featured: false
   },
   {
     id: 3,
-    title: "Nexus OS",
-    description: "An experimental web-based operating system concept with a heavy emphasis on window management and glassmorphism.",
-    tech: ["React", "Zustand", "Tailwind", "Vite"],
-    link: "#",
-    github: "#",
-    image: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=1200&auto=format&fit=crop", // Abstract prism
+    title: "APE — Advanced Photo Extractor",
+    description: "A facial recognition system for event photo retrieval — attendees upload a selfie and instantly get every photo of themselves from thousands of event images, instead of scrolling through a shared album.",
+    role: "Core builder — implemented the face-recognition pipeline and web app; wrote it up as an IEEE-format base paper.",
+    tech: ["face-api.js", "TensorFlow.js", "Next.js 15"],
+    link: "#", // TODO
+    github: "#", // TODO
+    image: "", // TODO: add real screenshot
     featured: false
   },
   {
     id: 4,
-    title: "Vortex Real-time",
-    description: "High-concurrency messaging engine optimized for low-latency communication and premium UX flow.",
-    tech: ["Flutter", "Dart", "Go", "Redis"],
-    link: "#",
-    github: "#",
-    image: "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=1200&auto=format&fit=crop", // Abstract light
+    title: "LOCOTrack",
+    description: "A real-time, multi-tenant campus fleet tracking web app — live vehicle location for multiple organizations on one platform, built for institutions managing shuttle or transport fleets.",
+    role: "Core Contributor", // TODO: fill your specific role
+    tech: ["React", "Node.js", "Socket.io", "MongoDB"],
+    link: "#", // TODO
+    github: "#", // TODO
+    image: "", // TODO: add real screenshot
     featured: false
   }
 ];

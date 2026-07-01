@@ -1,4 +1,3 @@
-import { cn } from "./WordPull"; // reuse the cn utility we put in WordPull, or better yet, I should make a utils file. Wait, I'll just redefine it here to be safe and independent.
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
@@ -11,7 +10,7 @@ export const BentoGrid = ({ className, children }) => {
   return (
     <div
       className={cnLocal(
-        "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto",
+        "grid auto-rows-auto grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto",
         className
       )}
     >
@@ -29,20 +28,21 @@ export const BentoGridItem = ({
 }) => {
   return (
     <motion.div
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
+      whileHover={{ y: -5 }}
       className={cnLocal(
-        "row-span-1 rounded-3xl group/bento hover:shadow-2xl transition duration-200 shadow-premium dark:shadow-premium-dark p-4 bg-white/60 dark:bg-slate-900/60 backdrop-blur-xl border border-white/20 dark:border-white/10 justify-between flex flex-col space-y-4",
+        "rounded-3xl group/bento transition duration-200 shadow-premium dark:shadow-premium-dark p-4 bg-white/60 dark:bg-slate-900/60 backdrop-blur-xl border border-slate-200 dark:border-white/10 flex flex-col gap-4 h-full",
         className
       )}
     >
       {header}
-      <div className="group-hover/bento:translate-x-2 transition duration-200">
-        {icon}
-        <div className="font-display font-bold text-neutral-800 dark:text-neutral-200 mb-2 mt-2">
-          {title}
+      <div className="flex flex-col flex-1 px-2 pb-2">
+        <div className="flex items-center gap-2 mb-2">
+          {icon}
+          <div className="font-display font-bold text-neutral-800 dark:text-neutral-200 text-lg">
+            {title}
+          </div>
         </div>
-        <div className="font-sans font-normal text-neutral-600 dark:text-neutral-400 text-sm">
+        <div className="font-sans font-normal text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed line-clamp-4">
           {description}
         </div>
       </div>

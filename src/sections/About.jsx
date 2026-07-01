@@ -14,12 +14,6 @@ export default function About() {
   const rotate1 = useTransform(scrollYProgress, [0, 1], [0, 180]);
   const scale1 = useTransform(scrollYProgress, [0, 0.5, 1], [0.8, 1, 0.8]);
 
-  const stats = [
-    { label: "Systems Built", value: "24+", icon: <Layers className="text-accent-indigo" /> },
-    { label: "Design Hours", value: "8k+", icon: <Palette className="text-accent-purple" /> },
-    { label: "Clean Code", value: "100%", icon: <Code2 className="text-accent-pink" /> },
-    { label: "Success Rate", value: "99%", icon: <Zap className="text-amber-400" /> },
-  ];
 
   return (
     <section id="about" ref={containerRef} className="py-32 bg-white/30 dark:bg-slate-900/30 relative overflow-hidden transition-colors duration-700">
@@ -37,30 +31,11 @@ export default function About() {
             </h2>
             <div className="space-y-6 text-lg text-secondary leading-relaxed">
               <p>
-                I don't just write code; I architect experiences. My process begins at the intersection of mathematical precision and aesthetic intuition.
+                I'm a final-year B.Tech student in AI & Data Science, and I build things I can actually ship — not just class projects that get graded and forgotten.
               </p>
               <p>
-                As a senior UI/UX strategist, I believe that high-performance engineering is only half the battle. The true magic happens when that power is delivered through a frictionless, polished interface.
+                I co-founded Atti, a student-run tech and creative studio, where I lead development across web, branding, and automation work. Outside of that, I'm usually deep in a personal build — right now it's SlotCut, a native Android app for salon booking in Tier 2/3 cities — while working through a structured data analytics track alongside my core full-stack work.
               </p>
-            </div>
-
-            <div className="grid grid-cols-2 gap-6 mt-12">
-              {stats.map((stat, i) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                  viewport={{ once: true }}
-                  className="glass-card p-6 group"
-                >
-                  <div className="p-3 bg-slate-50 dark:bg-slate-800 w-fit rounded-xl mb-4 group-hover:scale-110 transition-transform">
-                    {stat.icon}
-                  </div>
-                  <h4 className="text-3xl font-display font-extrabold mb-1">{stat.value}</h4>
-                  <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">{stat.label}</p>
-                </motion.div>
-              ))}
             </div>
           </motion.div>
 
@@ -99,10 +74,10 @@ export default function About() {
               transition={{ duration: 3, repeat: Infinity, delay: 1 }}
               className="absolute -top-5 -right-5 glass-card p-4 flex items-center gap-3 z-10"
             >
-              <div className="w-10 h-10 bg-accent-indigo rounded-lg flex items-center justify-center text-white font-bold">F</div>
+              <div className="w-10 h-10 bg-accent-indigo rounded-lg flex items-center justify-center text-white font-bold text-xs">FE</div>
               <div>
-                <p className="text-[10px] font-bold text-slate-400 uppercase">Prototyping</p>
-                <p className="text-xs font-bold">Figma Master</p>
+                <p className="text-[10px] font-bold text-slate-400 uppercase">Frontend</p>
+                <p className="text-xs font-bold">React & Flutter</p>
               </div>
             </motion.div>
             
@@ -111,10 +86,10 @@ export default function About() {
               transition={{ duration: 3, repeat: Infinity }}
               className="absolute -bottom-5 -left-5 glass-card p-4 flex items-center gap-3 z-10"
             >
-              <div className="w-10 h-10 bg-slate-900 dark:bg-slate-700 rounded-lg flex items-center justify-center text-white font-bold">R</div>
+              <div className="w-10 h-10 bg-slate-900 dark:bg-slate-700 rounded-lg flex items-center justify-center text-white font-bold text-xs">BE</div>
               <div>
-                <p className="text-[10px] font-bold text-slate-400 uppercase">Development</p>
-                <p className="text-xs font-bold">React Architect</p>
+                <p className="text-[10px] font-bold text-slate-400 uppercase">Backend</p>
+                <p className="text-xs font-bold">Node & Socket.io</p>
               </div>
             </motion.div>
           </motion.div>

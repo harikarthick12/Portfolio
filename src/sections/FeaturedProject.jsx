@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, GithubIcon, Sparkles } from 'lucide-react';
+import { ExternalLink, Github, Sparkles } from 'lucide-react';
 import { projects } from '../data/projects';
 
 export default function FeaturedProject() {
@@ -8,7 +8,7 @@ export default function FeaturedProject() {
   if (!project) return null;
 
   return (
-    <section id="work" className="py-32 relative">
+    <section id="work" className="py-32 relative transition-colors duration-700">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -20,7 +20,7 @@ export default function FeaturedProject() {
             <Sparkles size={14} /> Selected Work
           </span>
           <h2 className="text-4xl md:text-6xl font-display font-extrabold tracking-tighter">
-            Digital <span className="text-gradient">Case Study</span>
+            Featured <span className="text-gradient">Build</span>
           </h2>
         </motion.div>
 
@@ -34,14 +34,18 @@ export default function FeaturedProject() {
           >
             <div className="absolute -inset-4 bg-gradient-to-r from-accent-indigo/10 to-accent-purple/10 rounded-[3rem] blur-2xl opacity-50" />
             <div className="relative overflow-hidden rounded-[2.5rem] aspect-[16/10] glass-panel p-4">
-              <div className="w-full h-full overflow-hidden rounded-[2rem] bg-slate-100">
-                <motion.img 
-                  src={project.image} 
-                  alt={project.title}
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.8 }}
-                  className="w-full h-full object-cover"
-                />
+              <div className="w-full h-full overflow-hidden rounded-[2rem] bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+                {project.image ? (
+                  <motion.img 
+                    src={project.image} 
+                    alt={project.title}
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.8 }}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                   <span className="text-slate-400 text-sm font-bold uppercase tracking-widest">Screenshot Pending</span>
+                )}
               </div>
             </div>
           </motion.div>
@@ -54,13 +58,20 @@ export default function FeaturedProject() {
             className="lg:col-span-5 flex flex-col gap-10 lg:pl-10"
           >
             <div>
-              <h3 className="text-4xl font-display font-extrabold mb-6 tracking-tight">{project.title}</h3>
-              <p className="text-xl text-secondary leading-relaxed mb-10">
+              <h3 className="text-4xl font-display font-extrabold mb-6 tracking-tight text-slate-900 dark:text-white">{project.title}</h3>
+              <p className="text-xl text-secondary leading-relaxed mb-6">
                 {project.description}
               </p>
+              {project.role && (
+                <div className="mb-8 p-4 bg-accent-indigo/5 border border-accent-indigo/20 rounded-2xl">
+                  <p className="text-sm text-slate-700 dark:text-slate-300">
+                    <span className="font-bold text-accent-indigo">Role:</span> {project.role}
+                  </p>
+                </div>
+              )}
               <div className="flex flex-wrap gap-3 mb-12">
                 {project.tech.map(t => (
-                  <span key={t} className="px-4 py-2 bg-white/60 border border-white/80 rounded-full text-xs font-bold text-secondary shadow-sm">
+                  <span key={t} className="px-4 py-2 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-xs font-bold text-secondary shadow-sm">
                     {t}
                   </span>
                 ))}
@@ -68,18 +79,24 @@ export default function FeaturedProject() {
             </div>
 
             <div className="flex items-center gap-8">
-              <motion.a
-                href={project.link}
-                whileHover={{ x: 5 }}
-                className="flex items-center gap-2 text-primary font-bold hover:text-accent-indigo transition-colors"
-              >
-                Launch Experience <ExternalLink size={18} />
-              </motion.a>
+               {project.link !== "#" && (
+                <motion.a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ x: 5 }}
+                  className="flex items-center gap-2 text-primary dark:text-white font-bold hover:text-accent-indigo dark:hover:text-accent-indigo transition-colors"
+                >
+                  View Live <ExternalLink size={18} />
+                </motion.a>
+               )}
               <motion.a
                 href={project.github}
-                className="flex items-center gap-2 text-secondary font-bold hover:text-primary transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-secondary font-bold hover:text-primary dark:hover:text-white transition-colors"
               >
-                Read Source <GithubIcon size={18} />
+                View Code <Github size={18} />
               </motion.a>
             </div>
           </motion.div>

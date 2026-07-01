@@ -30,16 +30,15 @@ function Counter({ value, suffix = "" }) {
 
 export default function Metrics() {
   const stats = [
-    { label: "Elite Projects", value: "32", suffix: "+" },
-    { label: "Lines of Precision", value: "250", suffix: "k" },
+    { label: "Projects Shipped", value: "5", suffix: "+" },
     { label: "Core Technologies", value: "18", suffix: "+" },
-    { label: "System Uptime", value: "99.9", suffix: "%" }
+    { label: "Team Collaborations", value: "3", suffix: "" },
+    { label: "Co-Founded Ventures", value: "1", suffix: "" }
   ];
 
   return (
-    <section className="py-40 relative">
-       {/* Background decorative mesh */}
-       <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:40px_40px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-20" />
+    <section className="py-40 relative bg-background transition-colors duration-700">
+       <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:40px_40px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-40 dark:opacity-20" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-16 md:gap-24">
@@ -52,7 +51,7 @@ export default function Metrics() {
               transition={{ delay: i * 0.1, duration: 0.8 }}
               className="text-center"
             >
-              <div className="text-5xl md:text-7xl font-display font-black tracking-tighter mb-4 text-slate-900">
+              <div className="text-5xl md:text-7xl font-display font-black tracking-tighter mb-4 text-slate-900 dark:text-slate-100">
                 <Counter value={stat.value} suffix={stat.suffix} />
               </div>
               <div className="h-1 w-8 bg-accent-indigo mx-auto mb-4 rounded-full" />

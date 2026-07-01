@@ -7,7 +7,7 @@ import About from './sections/About';
 import FeaturedProject from './sections/FeaturedProject';
 import ProjectsGrid from './sections/ProjectsGrid';
 import Skills from './sections/Skills';
-import WhatIOffer from './sections/WhatIOffer';
+import Experience from './sections/Experience';
 import Metrics from './sections/Metrics';
 import Contact from './sections/Contact';
 
@@ -22,9 +22,9 @@ function App() {
         <main>
           <Hero />
           <About />
+          <Experience />
           <FeaturedProject />
           <ProjectsGrid />
-          <WhatIOffer />
           <Skills />
           <Metrics />
           <Contact />

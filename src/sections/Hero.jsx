@@ -39,13 +39,13 @@ export default function Hero() {
             className="mb-8"
           >
             <span className="px-5 py-2 text-xs font-bold tracking-[0.2em] uppercase border border-slate-200 dark:border-slate-700 bg-white/50 dark:bg-slate-800/50 backdrop-blur-md rounded-full text-secondary">
-              Architecting Digital Excellence
+              Final-Year AI & Data Science Student
             </span>
           </motion.div>
           
           <div className="text-6xl md:text-[7.5rem] font-display font-extrabold leading-[0.9] tracking-tighter mb-10 flex flex-col items-center">
-            <WordPull text="Engineering" />
-            <WordPull text="Pure Motion." className="text-gradient" delay={0.1} />
+            <WordPull text="Hari Karthick" />
+            <WordPull text="Full-Stack Developer" className="text-gradient" delay={0.1} />
           </div>
           
           <motion.p
@@ -54,7 +54,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="max-w-2xl text-lg md:text-xl text-secondary leading-relaxed mb-14"
           >
-            A senior developer and UI/UX strategist dedicated to building high-performance applications with a polished, premium aesthetic.
+            I build real products — apps, platforms, and tools — end-to-end. Co-founder & Tech Lead at Atti, currently shipping SlotCut for real users.
           </motion.p>
           
           <motion.div
@@ -76,7 +76,13 @@ export default function Hero() {
               </motion.span>
             </MagneticButton>
             <MagneticButton 
-              className="btn-secondary"
+              className="btn-secondary dark:bg-white/10 dark:hover:bg-white/20 dark:border-white/20"
+              onClick={() => window.open('/resume.pdf', '_blank')}
+            >
+              Download Resume
+            </MagneticButton>
+            <MagneticButton 
+              className="btn-secondary dark:bg-white/10 dark:hover:bg-white/20 dark:border-white/20"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Let's Connect

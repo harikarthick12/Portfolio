@@ -60,11 +60,11 @@
   }
 
   .btn-primary {
-    @apply px-8 py-4 bg-primary text-white rounded-full font-bold flex items-center gap-2 hover:bg-slate-800 transition-all shadow-lg hover:shadow-black/20 dark:hover:shadow-white/10;
+    @apply px-8 py-4 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 rounded-full font-bold flex items-center justify-center gap-2 hover:bg-slate-800 dark:hover:bg-white transition-all shadow-lg hover:shadow-black/20 dark:hover:shadow-white/10;
   }
 
   .btn-secondary {
-    @apply px-8 py-4 bg-white/80 backdrop-blur-md border border-white/50 rounded-full font-bold hover:bg-white transition-all shadow-sm;
+    @apply px-8 py-4 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 rounded-full font-bold hover:bg-white dark:hover:bg-slate-700 transition-all shadow-sm;
   }
 
   .nav-link {
