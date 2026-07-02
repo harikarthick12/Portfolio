@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Sparkles } from 'lucide-react';
 import { projects } from '../data/projects';
+import { InteractiveProjectTitle } from '../components/ui/InteractiveProjectTitle';
 
 export default function FeaturedProject() {
   const project = projects.find(p => p.featured);
@@ -46,17 +47,9 @@ export default function FeaturedProject() {
                 ) : (
                   <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 overflow-hidden relative">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.03)_1px,transparent_1px)] dark:bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[length:24px_24px]" />
-                    <motion.div 
-                      initial={{ clipPath: 'inset(0 100% 0 0)' }}
-                      whileInView={{ clipPath: 'inset(0 0% 0 0)' }}
-                      transition={{ duration: 2, ease: "easeInOut" }}
-                      viewport={{ once: false }}
-                      className="z-10 flex items-center justify-center w-full h-full"
-                    >
-                      <span className="font-cursive text-5xl md:text-7xl font-bold text-slate-400 dark:text-slate-500 -rotate-6 transform scale-110 transition-all duration-700 text-center px-4 leading-tight drop-shadow-sm">
-                        {project.title}
-                      </span>
-                    </motion.div>
+                    <div className="z-10 flex items-center justify-center w-full h-full p-8">
+                      <InteractiveProjectTitle title={project.title} fontSize={80} />
+                    </div>
                   </div>
                 )}
               </div>
@@ -103,14 +96,16 @@ export default function FeaturedProject() {
                   View Live <ExternalLink size={18} />
                 </motion.a>
                )}
-              <motion.a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-secondary font-bold hover:text-primary dark:hover:text-white transition-colors"
-              >
-                View Code <Github size={18} />
-              </motion.a>
+              {project.github !== "#" && (
+                <motion.a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-secondary font-bold hover:text-primary dark:hover:text-white transition-colors"
+                >
+                  View Code <Github size={18} />
+                </motion.a>
+              )}
             </div>
           </motion.div>
         </div>

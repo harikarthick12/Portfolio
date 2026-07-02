@@ -28,7 +28,7 @@ export const projects = [
     role: "Core builder — implemented the face-recognition pipeline and web app; wrote it up as an IEEE-format base paper.",
     tech: ["face-api.js", "TensorFlow.js", "Next.js 15"],
     link: "#", // TODO
-    github: "#", // TODO
+    github: "https://github.com/harikarthick12/Advanced-Photo-Extractor.git",
     image: "", // TODO: add real screenshot
     featured: false
   },
@@ -39,7 +39,7 @@ export const projects = [
     role: "Core Contributor", // TODO: fill your specific role
     tech: ["React", "Node.js", "Socket.io", "MongoDB"],
     link: "#", // TODO
-    github: "#", // TODO
+    github: "https://github.com/harikarthick12/Locotrack.git", // TODO
     image: "", // TODO: add real screenshot
     featured: false
   },

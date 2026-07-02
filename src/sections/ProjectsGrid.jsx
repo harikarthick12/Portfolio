@@ -4,6 +4,7 @@ import { ExternalLink, Github, Code2, ArrowRight, ArrowDown, ArrowUp } from 'luc
 import { projects } from '../data/projects';
 import { BentoGrid, BentoGridItem } from '../components/ui/BentoGrid';
 import { MagneticButton } from '../components/ui/MagneticButton';
+import { InteractiveProjectTitle } from '../components/ui/InteractiveProjectTitle';
 
 export default function ProjectsGrid() {
   const [showAll, setShowAll] = useState(false);
@@ -56,28 +57,22 @@ export default function ProjectsGrid() {
                     <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 overflow-hidden relative">
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.03)_1px,transparent_1px)] dark:bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[length:16px_16px]" />
                       
-                      <motion.div 
-                        initial={{ clipPath: 'inset(0 100% 0 0)' }}
-                        whileInView={{ clipPath: 'inset(0 0% 0 0)' }}
-                        transition={{ duration: 2, ease: "easeInOut" }}
-                        viewport={{ once: false }}
-                        className="z-10 flex items-center justify-center w-full h-full"
-                      >
-                        <span className="font-cursive text-4xl md:text-5xl font-bold text-slate-400 dark:text-slate-500 -rotate-6 transform scale-110 group-hover/bento:scale-125 group-hover/bento:-rotate-3 group-hover/bento:text-accent-indigo transition-all duration-700 text-center px-4 leading-tight drop-shadow-sm">
-                          {project.title}
-                        </span>
-                      </motion.div>
+                      <div className="z-10 flex items-center justify-center w-full h-full p-4">
+                        <InteractiveProjectTitle title={project.title} fontSize={56} />
+                      </div>
                     </div>
                   )}
-                  <div className="absolute inset-0 z-20 bg-slate-900/40 backdrop-blur-[2px] flex items-center justify-center gap-4 opacity-0 group-hover/bento:opacity-100 transition-all duration-500">
+                  <div className="absolute inset-0 z-20 bg-slate-900/40 backdrop-blur-[2px] flex items-center justify-center gap-4 opacity-0 group-hover/bento:opacity-100 transition-all duration-500 pointer-events-none">
                     {project.link !== "#" && (
-                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white text-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-xl">
+                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white text-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-xl pointer-events-auto">
                         <ExternalLink size={18} />
                       </a>
                     )}
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/20 text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform backdrop-blur-md border border-white/30">
-                      <Github size={18} />
-                    </a>
+                    {project.github !== "#" && (
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/20 text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform backdrop-blur-md border border-white/30 pointer-events-auto">
+                        <Github size={18} />
+                      </a>
+                    )}
                   </div>
                 </div>
               }
@@ -90,13 +85,13 @@ export default function ProjectsGrid() {
 
         <div className="flex justify-center">
           <MagneticButton>
-            <button 
+            <div 
               onClick={() => setShowAll(!showAll)}
-              className="px-8 py-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-primary dark:text-white rounded-full font-bold flex items-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all shadow-sm"
+              className="cursor-pointer px-8 py-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-primary dark:text-white rounded-full font-bold flex items-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all shadow-sm"
             >
               {showAll ? 'Show Less Projects' : 'View All Projects'}
               {showAll ? <ArrowUp size={18} /> : <ArrowDown size={18} />}
-            </button>
+            </div>
           </MagneticButton>
         </div>
       </div>
