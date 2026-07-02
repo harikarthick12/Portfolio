@@ -31,7 +31,7 @@ export default function About() {
             </h2>
             <div className="space-y-6 text-lg text-secondary leading-relaxed">
               <p>
-                I'm a final-year B.Tech student in AI & Data Science, and I build things I can actually ship — not just class projects that get graded and forgotten.
+                Hi, I'm Hari Karthick, passionate about AI, Machine Learning, and Full Stack Development. I'm a final-year B.Tech student, and I build things I can actually ship — not just class projects that get graded and forgotten.
               </p>
               <p>
                 I co-founded Atti, a student-run tech and creative studio, where I lead development across web, branding, and automation work. Outside of that, I'm usually deep in a personal build — right now it's SlotCut, a native Android app for salon booking in Tier 2/3 cities — while working through a structured data analytics track alongside my core full-stack work.

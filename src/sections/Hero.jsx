@@ -39,7 +39,7 @@ export default function Hero() {
             className="mb-8"
           >
             <span className="px-5 py-2 text-xs font-bold tracking-[0.2em] uppercase border border-slate-200 dark:border-slate-700 bg-white/50 dark:bg-slate-800/50 backdrop-blur-md rounded-full text-secondary">
-              Final-Year AI & Data Science Student
+              AI & Data Science Student | Full Stack Developer
             </span>
           </motion.div>
           
