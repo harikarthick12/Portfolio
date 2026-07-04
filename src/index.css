@@ -69,7 +69,7 @@
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-accent-indigo via-accent-purple to-accent-pink bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-slate-800 to-slate-500 dark:from-slate-200 dark:to-slate-500 bg-clip-text text-transparent;
   }
 
   .btn-primary {
