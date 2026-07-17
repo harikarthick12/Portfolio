@@ -13,9 +13,9 @@ export const InteractiveProjectTitle = ({ title, fontSize = 72 }) => {
           damping: 20,
           duration: 0.6 
         }}
-        className="font-jalliya text-slate-700 dark:text-slate-300 drop-shadow-sm text-center -rotate-6 transform transition-all duration-300 group-hover:text-accent-indigo group-hover:scale-110"
+        className="font-display font-extrabold tracking-tight text-slate-700 dark:text-slate-300 drop-shadow-sm text-center transform transition-all duration-300 group-hover:text-accent-indigo group-hover:scale-105"
         style={{ 
-          fontSize: `${fontSize}px`, 
+          fontSize: `${fontSize * 0.75}px`, 
           lineHeight: 1.2,
           padding: '0.5em',
         }}

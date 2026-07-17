@@ -1,5 +1,16 @@
 export const projects = [
   {
+    id: 9,
+    title: "Luvora",
+    description: "An ad-free lossless music streaming application. Experience studio-quality sound with offline listening, high-quality audio, and beautiful custom UI.",
+    role: "Full Stack Developer / Architect",
+    tech: ["Android", "Lossless Audio", "Offline Music", "Streaming"],
+    link: "https://luvoraweb.netlify.app/",
+    github: "https://github.com/harikarthick12/luvoraweb.git",
+    image: "", 
+    featured: true
+  },
+  {
     id: 1,
     title: "SlotCut",
     description: "A hyperlocal salon booking and live-queue management platform built for Tier 2/3 cities, where walk-in wait times are the real pain point. Users see live queue status and book a slot in real time instead of waiting in-store.",
@@ -8,7 +19,7 @@ export const projects = [
     link: "#", // TODO: live APK / Play Store link
     github: "#", // TODO
     image: "", // TODO: add real screenshot
-    featured: true
+    featured: false
   },
   {
     id: 2,
