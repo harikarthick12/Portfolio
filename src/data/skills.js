@@ -1,4 +1,7 @@
 export const skills = [
+  { name: "Python", category: "backend" },
+  { name: "SQL", category: "backend" },
+  { name: "Problem Solving", category: "tools" },
   { name: "React", category: "frontend" },
   { name: "Next.js", category: "frontend" },
   { name: "Tailwind CSS", category: "frontend" },

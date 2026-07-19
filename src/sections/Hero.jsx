@@ -32,16 +32,7 @@ export default function Hero() {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col items-center text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-8"
-          >
-            <span className="px-5 py-2 text-xs font-bold tracking-[0.2em] uppercase border border-slate-200 dark:border-slate-700 bg-white/50 dark:bg-slate-800/50 backdrop-blur-md rounded-full text-secondary">
-              AI & Data Science Student | Full Stack Developer
-            </span>
-          </motion.div>
+
           
           <div className="text-5xl md:text-7xl lg:text-[6rem] font-display font-extrabold leading-[0.9] tracking-tighter mb-10 flex flex-col items-center">
             <WordPull text="Hari Karthick" wrapperClassName="justify-center flex-nowrap" />

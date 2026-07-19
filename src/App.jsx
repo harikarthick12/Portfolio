@@ -7,6 +7,7 @@ import About from './sections/About';
 import FeaturedProject from './sections/FeaturedProject';
 import ProjectsGrid from './sections/ProjectsGrid';
 import Skills from './sections/Skills';
+import Certificates from './sections/Certificates';
 import Experience from './sections/Experience';
 import Metrics from './sections/Metrics';
 import Contact from './sections/Contact';
@@ -26,6 +27,7 @@ function App() {
           <FeaturedProject />
           <ProjectsGrid />
           <Skills />
+          <Certificates />
           <Metrics />
           <Contact />
         </main>
