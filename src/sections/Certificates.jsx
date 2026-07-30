@@ -9,7 +9,7 @@ export default function Certificates() {
       id: 1,
       title: "HackerRank Python Basics",
       issuer: "HackerRank",
-      date: "Placeholder Date",
+      date: "18th July 2026",
       link: "#",
       image: "/python-cert.png" // Replace with your actual image name in the public folder
     },
@@ -17,7 +17,7 @@ export default function Certificates() {
       id: 2,
       title: "HackerRank SQL Intermediate",
       issuer: "HackerRank",
-      date: "Placeholder Date",
+      date: "17th July 2026",
       link: "#",
       image: "/sql-cert.png" // Replace with your actual image name in the public folder
     },
@@ -25,7 +25,7 @@ export default function Certificates() {
       id: 3,
       title: "HackerRank Problem Solving Intermediate",
       issuer: "HackerRank",
-      date: "Placeholder Date",
+      date: "18th July 2026",
       link: "#",
       image: "/problem-solving-cert.png" // Replace with your actual image name in the public folder
     }
