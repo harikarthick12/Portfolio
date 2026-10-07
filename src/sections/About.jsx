@@ -34,7 +34,7 @@ export default function About() {
                 Hi, I'm Hari Karthick, passionate about AI, Machine Learning, and Full Stack Development. I'm a final-year B.Tech student, and I build things I can actually ship — not just class projects that get graded and forgotten.
               </p>
               <p>
-                I co-founded Atti, a student-run tech and creative studio, where I lead development across web, branding, and automation work. Outside of that, I'm usually deep in a personal build — right now it's SlotCut, a native Android app for salon booking in Tier 2/3 cities — while working through a structured data analytics track alongside my core full-stack work.
+                I co-founded One Vision, a student-run tech and creative studio, where I lead development across web, branding, and automation work. Outside of that, I'm usually deep in a personal build — right now it's SlotCut, a native Android app for salon booking in Tier 2/3 cities — while working through a structured data analytics track alongside my core full-stack work.
               </p>
             </div>
           </motion.div>
@@ -87,7 +87,7 @@ export default function About() {
                       <span className="text-green-500">✔</span> Initialized <span className="text-blue-400">SlotCut</span> Native Android App
                     </motion.div>
                     <motion.div variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }} className="mb-4">
-                      <span className="text-green-500">✔</span> Bootstrapped <span className="text-yellow-500">Atti</span> Tech &amp; Creative Studio
+                      <span className="text-green-500">✔</span> Bootstrapped <span className="text-yellow-500">One Vision</span> Tech &amp; Creative Studio
                     </motion.div>
 
                     <motion.div variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }} className="text-slate-100 font-bold">

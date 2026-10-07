@@ -1,12 +1,12 @@
 export const projects = [
   {
     id: 9,
-    title: "Luvora",
+    title: "RYVON-BEATZ",
     description: "An ad-free lossless music streaming application. Experience studio-quality sound with offline listening, high-quality audio, and beautiful custom UI.",
     role: "Full Stack Developer / Architect",
     tech: ["Android", "Lossless Audio", "Offline Music", "Streaming"],
-    link: "https://luvoraweb.netlify.app/",
-    github: "https://github.com/harikarthick12/luvoraweb.git",
+    link: "https://ryvonbeatz.netlify.app/",
+    github: "https://github.com/harikarthick12/RYVON-BEATZ.git",
     image: "", 
     featured: true
   },
@@ -89,7 +89,7 @@ export const projects = [
   },
   {
     id: 8,
-    title: "Atti",
+    title: "One Vision",
     description: "Student-powered creative & tech community — we build your digital presence, affordably.",
     role: "Co-Founder & Tech Lead",
     tech: ["Web", "Community"],
