@@ -6,7 +6,7 @@ import { MagneticButton } from '../components/ui/MagneticButton';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 px-6">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-16 px-4 sm:px-6">
       {/* Dynamic Particle Background */}
       <Particles className="absolute inset-0 z-0" quantity={150} ease={80} />
 
@@ -30,20 +30,19 @@ export default function Hero() {
         className="absolute bottom-1/4 -right-20 w-96 h-96 bg-accent-purple/10 rounded-full blur-[120px] pointer-events-none"
       />
       
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10 w-full">
         <div className="flex flex-col items-center text-center">
 
-          
-          <div className="text-5xl md:text-7xl lg:text-[6rem] font-display font-extrabold leading-[0.9] tracking-tighter mb-10 flex flex-col items-center">
-            <WordPull text="Hari Karthick" wrapperClassName="justify-center flex-nowrap" />
-            <WordPull text="Full-Stack Developer" className="text-gradient whitespace-nowrap" wrapperClassName="justify-center flex-nowrap" delay={0.1} />
+          <div className="text-3xl sm:text-5xl md:text-7xl lg:text-[6rem] font-display font-extrabold leading-[1.08] sm:leading-[0.95] tracking-tighter mb-6 sm:mb-10 flex flex-col items-center max-w-full">
+            <WordPull text="Hari Karthick" wrapperClassName="justify-center" />
+            <WordPull text="Full-Stack Developer" className="text-gradient" wrapperClassName="justify-center" delay={0.1} />
           </div>
           
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="max-w-2xl text-lg md:text-xl text-secondary leading-relaxed mb-14"
+            className="max-w-2xl text-base sm:text-lg md:text-xl text-secondary leading-relaxed mb-10 sm:mb-14 px-2"
           >
             I build real products — apps, platforms, and tools — end-to-end. Co-founder & Tech Lead at One Vision, currently shipping SlotCut for real users.
           </motion.p>
@@ -52,10 +51,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="flex flex-col sm:flex-row items-center gap-6"
+            className="flex flex-col sm:flex-row items-center gap-3.5 sm:gap-6 w-full sm:w-auto max-w-md sm:max-w-none"
           >
             <MagneticButton 
-              className="btn-primary group"
+              className="btn-primary group w-full sm:w-auto justify-center py-3.5 sm:py-4"
               onClick={() => document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Explore Projects 
@@ -67,13 +66,13 @@ export default function Hero() {
               </motion.span>
             </MagneticButton>
             <MagneticButton 
-              className="btn-secondary dark:bg-white/10 dark:hover:bg-white/20 dark:border-white/20"
+              className="btn-secondary dark:bg-white/10 dark:hover:bg-white/20 dark:border-white/20 w-full sm:w-auto justify-center py-3.5 sm:py-4"
               onClick={() => window.open('/resume.pdf', '_blank')}
             >
               Download Resume
             </MagneticButton>
             <MagneticButton 
-              className="btn-secondary dark:bg-white/10 dark:hover:bg-white/20 dark:border-white/20"
+              className="btn-secondary dark:bg-white/10 dark:hover:bg-white/20 dark:border-white/20 w-full sm:w-auto justify-center py-3.5 sm:py-4"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Let's Connect

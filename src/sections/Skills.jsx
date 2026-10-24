@@ -6,10 +6,10 @@ export default function Skills() {
   const marqueeSkills = [...skills, ...skills, ...skills];
 
   return (
-    <section id="skills" className="py-32 overflow-hidden border-y border-slate-100 bg-white/50">
-      <div className="mb-20 px-6 max-w-7xl mx-auto text-center">
-        <span className="text-accent-indigo font-bold uppercase tracking-widest text-[10px] mb-4 block">Proficiencies</span>
-        <h2 className="text-4xl md:text-5xl font-display font-extrabold tracking-tight">The Technical <span className="text-gradient">Arsenal</span></h2>
+    <section id="skills" className="py-20 sm:py-32 overflow-hidden border-y border-slate-100 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50">
+      <div className="mb-12 sm:mb-20 px-4 sm:px-6 max-w-7xl mx-auto text-center">
+        <span className="text-accent-indigo font-bold uppercase tracking-widest text-[10px] sm:text-xs mb-3 sm:mb-4 block">Proficiencies</span>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold tracking-tight">The Technical <span className="text-gradient">Arsenal</span></h2>
       </div>
       
       <div className="flex relative">
@@ -25,15 +25,15 @@ export default function Skills() {
               ease: "linear",
             },
           }}
-          className="flex gap-10 whitespace-nowrap"
+          className="flex gap-6 sm:gap-10 whitespace-nowrap"
         >
           {marqueeSkills.map((skill, i) => (
             <div 
               key={i}
-              className="flex items-center gap-5 px-10 py-6 glass-card border-white shadow-premium group cursor-default"
+              className="flex items-center gap-3 sm:gap-5 px-6 sm:px-10 py-3.5 sm:py-6 glass-card border-white dark:border-slate-800 shadow-premium group cursor-default"
             >
               <div className="w-2 h-2 rounded-full bg-accent-indigo group-hover:scale-150 transition-transform duration-300" />
-              <span className="text-3xl font-display font-black text-slate-300 group-hover:text-primary transition-colors duration-300">
+              <span className="text-xl sm:text-2xl md:text-3xl font-display font-black text-slate-300 dark:text-slate-600 group-hover:text-primary transition-colors duration-300">
                 {skill.name}
               </span>
             </div>
@@ -41,7 +41,7 @@ export default function Skills() {
         </motion.div>
       </div>
 
-      <div className="mt-24 max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12">
+      <div className="mt-16 sm:mt-24 max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-12">
         {[
           { label: "Frontend", color: "from-accent-indigo to-indigo-400" },
           { label: "Backend", color: "from-accent-purple to-purple-400" },

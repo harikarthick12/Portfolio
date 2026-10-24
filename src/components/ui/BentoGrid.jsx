@@ -25,6 +25,7 @@ export const BentoGridItem = ({
   description,
   header,
   icon,
+  footer,
 }) => {
   return (
     <motion.div
@@ -35,16 +36,19 @@ export const BentoGridItem = ({
       )}
     >
       {header}
-      <div className="flex flex-col flex-1 px-2 pb-2">
-        <div className="flex items-center gap-2 mb-2">
-          {icon}
-          <div className="font-display font-bold text-neutral-800 dark:text-neutral-200 text-lg">
-            {title}
+      <div className="flex flex-col flex-1 px-2 pb-2 justify-between">
+        <div>
+          <div className="flex items-center gap-2 mb-2">
+            {icon}
+            <div className="font-display font-bold text-neutral-800 dark:text-neutral-200 text-lg">
+              {title}
+            </div>
+          </div>
+          <div className="font-sans font-normal text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed line-clamp-4">
+            {description}
           </div>
         </div>
-        <div className="font-sans font-normal text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed line-clamp-4">
-          {description}
-        </div>
+        {footer && <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/80">{footer}</div>}
       </div>
     </motion.div>
   );

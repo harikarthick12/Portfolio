@@ -21,25 +21,25 @@ const experiences = [
   {
     id: 3,
     role: "B.Tech in AI & Data Science",
-    company: "Dhanalakshmi Srinivasan Universiy", // TODO: fill this in
-    date: "2023 - 2027(Currently in 4th Year)",
-    description: "Final-year student focusing on data analytics, machine learning, and full-stack development.",
+    company: "Dhanalakshmi Srinivasan University",
+    date: "2023 - 2027 (Expected)",
+    description: "Pursuing B.Tech in Artificial Intelligence and Data Science. Focusing on software engineering, AI features, and data analytics.",
     icon: <GraduationCap size={20} className="text-accent-pink" />
   }
 ];
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-32 relative bg-white/30 dark:bg-slate-900/30 transition-colors duration-700">
-      <div className="max-w-4xl mx-auto px-6">
-        <div className="text-center mb-20">
-          <span className="text-accent-indigo font-bold uppercase tracking-widest text-xs mb-4 block">Timeline</span>
-          <h2 className="text-4xl md:text-5xl font-display font-extrabold tracking-tight text-slate-900 dark:text-white">
+    <section id="experience" className="py-20 sm:py-32 relative bg-white/30 dark:bg-slate-900/30 transition-colors duration-700">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-20">
+          <span className="text-accent-indigo font-bold uppercase tracking-widest text-xs mb-3 sm:mb-4 block">Timeline</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold tracking-tight text-slate-900 dark:text-white">
             Experience & <span className="text-gradient">Education</span>
           </h2>
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-8 sm:space-y-12">
           {experiences.map((exp, i) => (
             <motion.div 
               key={exp.id}

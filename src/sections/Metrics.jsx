@@ -37,11 +37,11 @@ export default function Metrics() {
   ];
 
   return (
-    <section className="py-40 relative bg-background transition-colors duration-700">
+    <section className="py-20 sm:py-32 relative bg-background transition-colors duration-700">
        <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:40px_40px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-40 dark:opacity-20" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-16 md:gap-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-16 md:gap-24">
           {stats.map((stat, i) => (
             <motion.div
               key={i}
@@ -51,11 +51,11 @@ export default function Metrics() {
               transition={{ delay: i * 0.1, duration: 0.8 }}
               className="text-center"
             >
-              <div className="text-5xl md:text-7xl font-display font-black tracking-tighter mb-4 text-slate-900 dark:text-slate-100">
+              <div className="text-4xl sm:text-5xl md:text-7xl font-display font-black tracking-tighter mb-2 sm:mb-4 text-slate-900 dark:text-slate-100">
                 <Counter value={stat.value} suffix={stat.suffix} />
               </div>
-              <div className="h-1 w-8 bg-accent-indigo mx-auto mb-4 rounded-full" />
-              <p className="text-secondary font-black uppercase tracking-[0.2em] text-[10px]">{stat.label}</p>
+              <div className="h-1 w-8 bg-accent-indigo mx-auto mb-3 sm:mb-4 rounded-full" />
+              <p className="text-secondary font-black uppercase tracking-[0.2em] text-[9px] sm:text-[10px]">{stat.label}</p>
             </motion.div>
           ))}
         </div>

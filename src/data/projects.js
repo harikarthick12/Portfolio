@@ -16,20 +16,53 @@ export const projects = [
     description: "A hyperlocal salon booking and live-queue management platform built for Tier 2/3 cities, where walk-in wait times are the real pain point. Users see live queue status and book a slot in real time instead of waiting in-store.",
     role: "Solo builder — architected and built the native Android app end-to-end.",
     tech: ["Kotlin", "Jetpack Compose", "MVVM", "Hilt", "Retrofit", "Socket.IO"],
-    link: "#", // TODO: live APK / Play Store link
-    github: "#", // TODO
-    image: "", // TODO: add real screenshot
+    link: "#",
+    github: "#",
+    image: "",
     featured: false
   },
   {
     id: 2,
-    title: "Audadham",
-    description: "A healthcare companion app for medicine management — OCR-based prescription scanning, drug interaction checking, and vitals tracking, built for people managing multiple prescriptions.",
-    role: "Built with a 3-person team; owned app architecture and core feature implementation alongside UI direction.",
-    tech: ["Flutter", "Dart", "OCR", "Firebase"],
-    link: "#", // TODO
-    github: "#", // TODO
-    image: "", // TODO: add real screenshot
+    title: "MediSure",
+    description: "A healthcare application concept featuring prescription OCR, medicine expiry tracking, drug interaction checking, and multilingual support.",
+    role: "Core Builder — healthcare architecture, OCR pipeline, and drug safety features.",
+    tech: ["Prescription OCR", "Expiry Tracking", "Drug Interaction", "Multilingual Support", "Flutter"],
+    link: "#",
+    github: "https://github.com/harikarthick12",
+    image: "",
+    featured: false
+  },
+  {
+    id: 5,
+    title: "Payanam Parcel",
+    description: "A crowd-sourced parcel delivery platform concept with trip creation, parcel listings, user verification, tracking, chat, and wallet functionality.",
+    role: "Full-Stack Developer",
+    tech: ["Trip Creation", "Parcel Listings", "User Verification", "Real-Time Tracking", "Chat & Wallet"],
+    link: "#",
+    github: "https://github.com/harikarthick12/Payanam-Parcel.git",
+    image: "",
+    featured: false
+  },
+  {
+    id: 10,
+    title: "ScamShield Agent",
+    description: "An AI-assisted scam investigation project designed to analyze suspicious information, organize evidence, and provide practical safety resources.",
+    role: "AI Developer / Prompt Engineer",
+    tech: ["AI Agents", "Scam Investigation", "Evidence Analysis", "Safety Resources", "Python"],
+    link: "#",
+    github: "https://github.com/harikarthick12",
+    image: "",
+    featured: false
+  },
+  {
+    id: 11,
+    title: "Cloud File-Sharing Platform",
+    description: "Web development projects exploring file uploads, sharing workflows, and full-stack application architecture.",
+    role: "Full-Stack Developer",
+    tech: ["File Uploads", "Sharing Workflows", "Node.js", "Express", "MongoDB", "React"],
+    link: "#",
+    github: "https://github.com/harikarthick12",
+    image: "",
     featured: false
   },
   {
@@ -38,30 +71,19 @@ export const projects = [
     description: "A facial recognition system for event photo retrieval — attendees upload a selfie and instantly get every photo of themselves from thousands of event images, instead of scrolling through a shared album.",
     role: "Core builder — implemented the face-recognition pipeline and web app; wrote it up as an IEEE-format base paper.",
     tech: ["face-api.js", "TensorFlow.js", "Next.js 15"],
-    link: "#", // TODO
+    link: "#",
     github: "https://github.com/harikarthick12/Advanced-Photo-Extractor.git",
-    image: "", // TODO: add real screenshot
+    image: "",
     featured: false
   },
   {
     id: 4,
     title: "LOCOTrack",
     description: "A real-time, multi-tenant campus fleet tracking web app — live vehicle location for multiple organizations on one platform, built for institutions managing shuttle or transport fleets.",
-    role: "Core Contributor", // TODO: fill your specific role
+    role: "Core Contributor",
     tech: ["React", "Node.js", "Socket.io", "MongoDB"],
-    link: "#", // TODO
-    github: "https://github.com/harikarthick12/Locotrack.git", // TODO
-    image: "", // TODO: add real screenshot
-    featured: false
-  },
-  {
-    id: 5,
-    title: "Payanam Parcel",
-    description: "A crowd-sourced, peer-to-peer parcel delivery platform that connects Senders with Travelers already heading to the same destination — turning every journey into a delivery opportunity.",
-    role: "Full-Stack Developer",
-    tech: ["Flutter", "Node.js", "Socket.io", "React"],
     link: "#",
-    github: "https://github.com/harikarthick12/Payanam-Parcel.git",
+    github: "https://github.com/harikarthick12/Locotrack.git",
     image: "",
     featured: false
   },
@@ -70,7 +92,7 @@ export const projects = [
     title: "AptiQ",
     description: "A production-ready web application that acts as a personal human tutor. It uses Generative AI to teach aptitude and technical concepts through an adaptive learning loop.",
     role: "Full-Stack Developer",
-    tech: ["Generative AI", "Web"],
+    tech: ["Generative AI", "Web", "React"],
     link: "#",
     github: "https://github.com/harikarthick12/AptiQ.git",
     image: "",

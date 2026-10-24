@@ -9,23 +9,23 @@ export default function FeaturedProject() {
   if (!project) return null;
 
   return (
-    <section id="work" className="py-32 relative transition-colors duration-700">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="work" className="py-20 sm:py-32 relative transition-colors duration-700">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20 text-center md:text-left"
+          className="mb-12 sm:mb-20 text-center md:text-left"
         >
-          <span className="flex items-center justify-center md:justify-start gap-2 text-accent-indigo font-bold uppercase tracking-widest text-xs mb-4">
+          <span className="flex items-center justify-center md:justify-start gap-2 text-accent-indigo font-bold uppercase tracking-widest text-xs mb-3 sm:mb-4">
             <Sparkles size={14} /> Selected Work
           </span>
-          <h2 className="text-4xl md:text-6xl font-display font-extrabold tracking-tighter">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-extrabold tracking-tighter">
             Featured <span className="text-gradient">Build</span>
           </h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-12 gap-10 items-center">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -33,9 +33,9 @@ export default function FeaturedProject() {
             transition={{ duration: 1 }}
             className="lg:col-span-7 relative group"
           >
-            <div className="absolute -inset-4 bg-gradient-to-r from-accent-indigo/10 to-accent-purple/10 rounded-[3rem] blur-2xl opacity-50" />
-            <div className="relative overflow-hidden rounded-[2.5rem] aspect-[16/10] glass-panel p-4">
-              <div className="w-full h-full overflow-hidden rounded-[2rem] bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+            <div className="absolute -inset-4 bg-gradient-to-r from-accent-indigo/10 to-accent-purple/10 rounded-[2rem] sm:rounded-[3rem] blur-2xl opacity-50" />
+            <div className="relative overflow-hidden rounded-2xl sm:rounded-[2.5rem] aspect-[16/10] glass-panel p-2.5 sm:p-4">
+              <div className="w-full h-full overflow-hidden rounded-xl sm:rounded-[2rem] bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
                 {project.image ? (
                   <motion.img 
                     src={project.image} 
@@ -47,7 +47,7 @@ export default function FeaturedProject() {
                 ) : (
                   <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 overflow-hidden relative">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.03)_1px,transparent_1px)] dark:bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[length:24px_24px]" />
-                    <div className="z-10 flex items-center justify-center w-full h-full p-8">
+                    <div className="z-10 flex items-center justify-center w-full h-full p-4 sm:p-8">
                       <InteractiveProjectTitle title={project.title} fontSize={80} />
                     </div>
                   </div>
@@ -61,11 +61,11 @@ export default function FeaturedProject() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="lg:col-span-5 flex flex-col gap-10 lg:pl-10"
+            className="lg:col-span-5 flex flex-col gap-6 sm:gap-10 lg:pl-10"
           >
             <div>
-              <h3 className="text-4xl font-display font-extrabold mb-6 tracking-tight text-slate-900 dark:text-white">{project.title}</h3>
-              <p className="text-xl text-secondary leading-relaxed mb-6">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-display font-extrabold mb-3 sm:mb-6 tracking-tight text-slate-900 dark:text-white">{project.title}</h3>
+              <p className="text-base sm:text-lg lg:text-xl text-secondary leading-relaxed mb-4 sm:mb-6">
                 {project.description}
               </p>
               {project.role && (
