@@ -9,8 +9,7 @@ import {
   Target, 
   Code2, 
   ArrowRight, 
-  Sparkles, 
-  CheckCircle2, 
+CheckCircle2, 
   Terminal,
   ExternalLink,
   Layers,
@@ -100,11 +99,6 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="lg:col-span-7"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent-indigo/10 border border-accent-indigo/20 text-accent-indigo text-xs font-bold tracking-widest uppercase mb-4 sm:mb-6">
-              <Sparkles size={14} />
-              About Me • Hari Karthick
-            </div>
-            
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold tracking-tight mb-6 sm:mb-8 text-slate-900 dark:text-white leading-tight">
               Where Engineering Meets <span className="text-gradient">Real-World Impact</span>
             </h2>

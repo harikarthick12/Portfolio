@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Sparkles } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 import { projects } from '../data/projects';
 import { InteractiveProjectTitle } from '../components/ui/InteractiveProjectTitle';
 
@@ -17,9 +17,6 @@ export default function FeaturedProject() {
           viewport={{ once: true }}
           className="mb-12 sm:mb-20 text-center md:text-left"
         >
-          <span className="flex items-center justify-center md:justify-start gap-2 text-accent-indigo font-bold uppercase tracking-widest text-xs mb-3 sm:mb-4">
-            <Sparkles size={14} /> Selected Work
-          </span>
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-extrabold tracking-tighter">
             Featured <span className="text-gradient">Build</span>
           </h2>
